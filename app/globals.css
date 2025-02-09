@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@600&family=Playfair+Display:ital,wght@1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #171415;
+  --foreground: #171717;
+}
+
+.bg-grad-yellow {
+  background: linear-gradient(99.53deg, #FFDD8F 3.24%, #E2B95A 79.42%);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171415;
+    --foreground: #ededed;
+  }
+}
+
+.bg-grad {
+  background: linear-gradient(179.91deg, #111111 0.08%, #282828 82.91%);
+
+}
+
+
+@font-face {
+  font-family: 'Qanelas Soft';
+  src: url('https://db.onlinewebfonts.com/c/cd5f4999f5bcf559f0f517c1241751d5?family=Qanelas+Soft+DEMO+Medium') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Qanelas Soft';
+  src: url('https://db.onlinewebfonts.com/c/2c69a572547e9b9d0b0d98df0f037f38?family=Qanelas+Soft+DEMO+ExtraBold') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Qanelas Soft', 'inter', sans-serif;
+}
