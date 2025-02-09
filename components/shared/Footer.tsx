@@ -5,9 +5,10 @@ import coverBook from '@/public/static/footer/Cover book.png'
 import emblemLogo from '@/public/static/logo/emblem.png'
 import vectors from '@/public/static/footer/Vector.png'
 import xLogo from '@/public/static/logo/socials/X.png'
-import Instagram from '@/public/static/logo/socials/Instagram.png'
-import Facebook from '@/public/static/logo/socials/Facebook.png'
-import Linkedin from '@/public/static/logo/socials/Linkedin.png'
+import Instagram from '@/public/static/logo/socials/instagram.png'
+import Facebook from '@/public/static/logo/socials/facebook.png'
+import Linkedin from '@/public/static/logo/socials/linkedin.png'
+
 
 
 
