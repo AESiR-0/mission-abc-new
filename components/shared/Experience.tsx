@@ -79,14 +79,14 @@ export default function TeachingSection() {
                                 className="bg-[#28282C] p-2 rounded-full text-yellow hover:bg-[#333] transition-colors"
                                 disabled={isAnimating}
                             >
-                                <ChevronLeft className="w-8 h-8 hover:scale-110 transition-transform" />
+                                <ChevronLeft className="w-5 h-5 hover:scale-110 transition-transform" />
                             </button>
                             <button
                                 onClick={nextSlide}
                                 className="bg-[#28282C] p-2 rounded-full text-yellow hover:bg-[#333] transition-colors"
                                 disabled={isAnimating}
                             >
-                                <ChevronRight className="w-8 h-8 hover:scale-110 transition-transform" />
+                                <ChevronRight className="w-5 h-5 hover:scale-110 transition-transform" />
                             </button>
                         </div>
 
