@@ -43,7 +43,7 @@ export default function MafiaCard() {
       {/* Main Container */}
       <div className="flex flex-col lg:flex-row w-full mx-5  gap-0 relative">
         {/* Left Section */}
-        <div className="w-1/2  h-[500px] sm:h-[550px] md:h-[600px] lg:h-[778px] lg:-mt-[80px] relative">
+        <div className="w-1/2 h-[500px] sm:h-[550px] md:h-[600px] lg:h-[778px] lg:-mt-[80px] relative">
           {/* Vector 2520 - Hidden on mobile */}
           {/* <div className="hidden lg:block absolute w-[41px] h-[66px] left-[525px] top-0 bg-[rgba(241,188,64,1)] z-10" /> */}
           <div className="hidden lg:block absolute right-10 top-0 z-10">
@@ -92,7 +92,7 @@ export default function MafiaCard() {
         </div>
 
         {/* Right Section - Carousel */}
-        <div className="w-full lg:w-[656.5px] h-[600px] sm:h-[550px] md:h-[600px] lg:h-[778px] lg:-mt-[80px] relative">
+        <div className="w-1/2 lg:w-[656.5px] h-[600px] sm:h-[550px] md:h-[600px] lg:h-[778px] lg:-mt-[80px] relative">
           <div className="w-full h-full lg:h-[618px] rounded-b-[12px] lg:rounded-r-[12px] lg:rounded-bl-none relative bg-[rgba(29,30,28,0.6)] border-[rgba(251,206,101,1)] lg:border-r-2 lg:border-t-2 lg:border-b-2 overflow-hidden">
             {/* Bottom gradient overlay */}
             <div className="absolute inset-x-0 bottom-0 h-[200px] sm:h-[250px] lg:h-[300px]" 
@@ -111,18 +111,20 @@ export default function MafiaCard() {
                   <div 
                     key={item.id}
 
-                    className="w-full h-[618px] py-8 sm:py-10 lg:py-[80px] px-6 sm:px-8 lg:px-16 flex flex-col justify-center gap-[10px]"
+                    className="w-full h-[618px] py-8 sm:py-10 lg:py-[80px] px-6 sm:px-8 lg:px-16 flex flex-col justify-start gap-8"
                   >
-                    <h2 className="text-[#FBCE65] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lg:mb-8 relative z-10">
+
+                    <h2 className="text-[#FBCE65] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold relative z-10">
                       {item.id}
                     </h2>
-                    <div className="space-y-4 lg:space-y-6 relative z-10">
+                    <div className="space-y-20  relative z-10">
                       {item.content.map((text, idx) => (
-                        <p key={idx} className="text-[#E5E5E5] text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+                        <p key={idx} className="text-[#E5E5E5]  sm:text-lg md:text-4xl leading-relaxed">
                           {text}
                         </p>
                       ))}
                     </div>
+
                   </div>
                 ))}
               </div>
