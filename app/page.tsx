@@ -10,6 +10,7 @@ import TruthPage from "@/components/shared/TruthPage";
 import Hero from '@/components/Hero'
 import InstructorStats from '@/components/InstructorStats'
 import TeachingExperience from "@/components/shared/Experience";
+import SharingStories from "@/components/shared/SharingStories";
 
 export default function Home() {
   return (
@@ -23,9 +24,11 @@ export default function Home() {
         <TruthPage />
 
         <Stories />
+        <SharingStories />
         <CatPrep />
         <TeachingExperience />
         <SuccessfullCarousel />
+
         <Footer />
       </div>
 
