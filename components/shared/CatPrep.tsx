@@ -60,26 +60,12 @@ export default function CatPrep() {
                   IIM A, B, and C aren't for everyone.
                   <br className="hidden sm:block" />Neither is Mission ABC.
                 </p>
-                <Button
-                  className="relative w-full md:w-auto text-black font-semibold py-6 px-8 rounded-xl text-lg transition-all duration-300"
-                  style={{
-                    width: 'fit-content',
-                    background: 'rgba(241, 195, 86, 1)',
-                    border: '2px solid transparent',
-                    borderImage: 'linear-gradient(116.22deg, #1D1E1C -4.25%, #1D1E1C 117.1%) 1',
-                    boxShadow: `
-                      0px 2px 1px 0px rgba(255, 255, 255, 0.04) inset,
-                      0px 2px 1px 0px rgba(255, 255, 255, 0.04) inset,
-                      0px 2px 1px 0px rgba(255, 255, 255, 0.04) inset,
-                      0px -2px 1px 0px rgba(255, 255, 255, 0.04) inset,
-                      0px -2px 1px 0px rgba(255, 255, 255, 0.04) inset,
-                      0px -2px 1px 0px rgba(255, 255, 255, 0.04) inset
-                    `
-                  }}
-                >
+                <button
+                  className="relative btn font-manrope bg-yellow w-full md:w-auto text-black font-semibold py-6 px-8 rounded-xl text-lg transition-all duration-300"                >
                   Register Now
-                </Button>
+                </button>
               </div>
+
             </div>
           </div>
 

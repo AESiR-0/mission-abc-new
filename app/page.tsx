@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <InstructorStats />
       <MafiaCard />
       <HeroWithWebinars />
       <Stories />

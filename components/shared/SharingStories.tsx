@@ -89,7 +89,6 @@ const SharingStories = () => {
                             transform: `translateX(-${scrollPosition * (100 / stories.length)}%)`
                         }}
                     >
-                        {/* Duplicate the array for infinite scroll effect */}
                         {[...stories, ...stories].map((story, index) => (
                             <div
                                 key={`${story.id}-${index}`}

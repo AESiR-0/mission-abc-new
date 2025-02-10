@@ -22,7 +22,7 @@ export default function Hero() {
             <p className="text-gray-300 text-lg sm:text-xl md:text-2xl font-thin mt-6 sm:mt-8 mb-8">
               Do not join us if your target is lower than IIM A, B, or C.
             </p>
-            <button className="font-manrope  btn bg-yellow btn text-black px-6 py-3 rounded-xl shadow-md hover:bg-yellow/80 text-sm md:text-base transition-colors">
+            <button className="font-manrope  btn bg-yellow btn text-black px-6 py-3 rounded-xl shadow-md   text-sm md:text-base transition-colors">
               Start Now
             </button>
           </div>

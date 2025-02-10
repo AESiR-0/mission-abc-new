@@ -69,7 +69,7 @@ export default function SuccessCarousel() {
           <span className="max-w-[850px]">Transform Your Future with KTW</span>
           <span className="max-w-[850px]">Real-World Success Stories</span>
         </h2>
-        <button className="font-manrope  btn bg-yellow text-black px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md hover:bg-yellow/80 text-sm md:text-base">
+        <button className="font-manrope  btn bg-yellow text-black px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md   text-sm md:text-base">
           Start Now
         </button>
 
