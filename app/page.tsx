@@ -10,6 +10,7 @@ import TruthPage from "@/components/shared/TruthPage";
 import Hero from '@/components/Hero'
 import InstructorStats from '@/components/InstructorStats'
 import TeachingExperience from "@/components/shared/Experience";
+import HeroWithWebinars from "@/components/HeroWithWebinars";
 
 export default function Home() {
   return (
@@ -20,10 +21,11 @@ export default function Home() {
 
 
         <MafiaCard />
-        <TruthPage />
-
+        <HeroWithWebinars />
         <Stories />
+        <TruthPage />
         <CatPrep />
+
         <TeachingExperience />
         <SuccessfullCarousel />
         <Footer />
