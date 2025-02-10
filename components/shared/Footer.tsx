@@ -18,7 +18,7 @@ export default function Footer() {
             {/* Hero Section */}
             <div className="bg-grad-yellow overflow-hidden relative rounded-[24px] min-h-[500px] md:h-[500px] rounded-b-none py-8 md:py-12 px-4 md:px-20 flex flex-col md:flex-row justify-between items-center">
                 <div className="z-10 max-w-full md:max-w-[50%]">
-                    <h1 className="text-2xl flex flex-col gap-3 md:text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#01388F] to-[#001C46]">
+                    <h1 className="text-2xl flex flex-col gap-3 md:text-5xl font-semibold bg-clip-text text-transparent ">
                         <span>Start Your Journey </span> <span> with Mission ABC</span>
                     </h1>
                     <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-4 sm:space-x-4">

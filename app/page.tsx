@@ -10,27 +10,22 @@ import TruthPage from "@/components/shared/TruthPage";
 import Hero from '@/components/Hero'
 import InstructorStats from '@/components/InstructorStats'
 import TeachingExperience from "@/components/shared/Experience";
+import HeroWithWebinars from "@/components/HeroWithWebinars";
 import SharingStories from "@/components/shared/SharingStories";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen  flex-col">
+    <main>
       <Hero />
       <InstructorStats />
-      <div className=" w-full bg-[rgb(20,21,19)] text-white  min-h-screen">
-
-
-        <MafiaCard />
-        <TruthPage />
-
-        <Stories />
-        <SharingStories />
-        <CatPrep />
-        <TeachingExperience />
-        <SuccessfullCarousel />
-
-        <Footer />
-      </div>
+      <MafiaCard />
+      <HeroWithWebinars />
+      <Stories />
+      <SharingStories />
+      <CatPrep />
+      <TruthPage />
+      <TeachingExperience />
+      <SuccessfullCarousel />
+      <Footer />
 
     </main>
   );

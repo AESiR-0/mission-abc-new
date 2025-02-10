@@ -9,12 +9,7 @@ export default function Hero() {
     <>
       <Navbar />
       <section
-        style={{
-          background: "linear-gradient(179.91deg, #1D1D1D 6.93%, rgba(247, 244, 242, 0) 96.03%)",
-          border: "1px solid ",
-          borderImageSource: "linear-gradient(180deg, rgba(241, 188, 64, 0.24) 0%, rgba(255, 255, 255, 0) 100%);",
-        }}
-        className=" relative flex flex-col justify-center items-center gap-10  max-md:m-0 m-10 rounded-xl min-h-screen px-4 py-16 md:py-24 overflow-hidden">
+        className="hero-grad relative  flex flex-col justify-center items-center gap-10  max-md:m-0 m-10 rounded-xl min-h-screen px-4 py-16 md:py-24 ">
         <div className="mx-auto max-md:m-0 max-w-6xl max-md:max-w-full">
           <div className="flex flex-col justify-center items-center">
             <div className="flex flex-col h-full justify-center items-center text-center">
@@ -32,27 +27,29 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <div className="flex flex-col border w-full max-w-7xl max-md:p-3 p-5 items-center justify-center">
-          <div className="flex flex-col max-md:items-center max-md:text-center  w-full justify-start  gap-8 items-start">
+        <div className="flex z-20 flex-col  w-full max-w-7xl max-md:p-3 p-5 items-center justify-center">
+          <div className="flex flex-col py-5 pb-10 sandeep-grad  max-md:items-center max-md:text-center   w-full justify-start pl-12  gap-8 items-start">
             <div className="p-5 max-md:space-y-2 ">
 
-              <h2 className="text-4xl font-bold mb-4">Sandeep Gupta</h2>
 
-              <p className="text-gray-400 mb-2">CAT/GMAT 100%iler</p>
-              <p className="text-gray-400 mb-4">Rejected IIM-A and Harvard</p>
-              <p className="text-gray-400">CAT Trainer since 1996</p>
+              <h2 className="text-6xl font-afacad font-bold mb-4">Sandeep Gupta</h2>
+
+              <p className="text-gray-400 font-poppins  ">CAT/GMAT 100%iler</p>
+              <p className="text-gray-400 font-poppins  ">Rejected IIM-A and Harvard</p>
+              <p className="text-gray-400 font-poppins  ">CAT Trainer since 1996</p>
             </div>
 
-            <div className=" bg-opacity-75 max-md:p-0 p-5 max-md:grid-cols-1 max-md:place-content-center max-md:place-items-center max-md:gap-5  grid grid-cols-3 ">
-              <div className=" bg-[#292929] p-3">
+
+            <div className=" card max-md:p-0 p-5 max-md:grid-cols-1 max-md:place-content-center max-md:place-items-center max-md:gap-5  grid grid-cols-3 ">
+              <div className="  p-3">
                 <p className="text-primary text-2xl font-bold">29 Years +</p>
                 <p className="text-sm text-gray-400">of transforming lives</p>
               </div>
-              <div className=" bg-[#292929] p-3">
+              <div className="  p-3">
                 <p className="text-primary text-2xl font-bold">76,000 Hrs +</p>
                 <p className="text-sm text-gray-400">Delivered onstage</p>
               </div>
-              <div className=" bg-[#292929] p-3">
+              <div className="  p-3">
                 <p className="text-primary w-full text-2xl font-bold">100,000 Admits +</p>
                 <p className="text-sm text-gray-400">to top schools & counting</p>
               </div>

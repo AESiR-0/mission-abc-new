@@ -109,7 +109,7 @@ export default function SuccessCarousel() {
           </Swiper>
 
           {/* Edge Gradient Masks */}
-          <div
+          {/* <div
             className="absolute top-0 left-0 w-[15%] md:w-[20%] h-full pointer-events-none z-10"
             style={{
               background: 'linear-gradient(90deg, rgb(20,21,19) 0%, rgba(20,21,19,0.001) 100%)'
@@ -120,7 +120,7 @@ export default function SuccessCarousel() {
             style={{
               background: 'linear-gradient(270deg, rgb(20,21,19) 0%, rgba(20,21,19,0.001) 100%)'
             }}
-          />
+          /> */}
         </div>
 
         {/* Action Buttons */}

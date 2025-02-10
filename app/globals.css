@@ -13,17 +13,30 @@
   background: linear-gradient(99.53deg, #FFDD8F 3.24%, #E2B95A 79.42%);
 }
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #171415;
-    --foreground: #ededed;
-  }
+.hero-grad {
+  border-radius: 24px;
+  border: 1px solid rgba(241, 188, 64, 0.24);
+  z-index: 10;
+  background: linear-gradient(180deg, #1D1D1D 6.93%, rgba(247, 244, 242, 0.00) 96.03%);
+  background-image: url('/static/hero/sec-a.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
 }
 
-.bg-grad {
-  background: linear-gradient(179.91deg, #111111 0.08%, #282828 82.91%);
+.sandeep-grad {
+  background: url('/static/hero/clients.png');
+  background-size: cover;
+  border-radius: 24px;
+  background-position: center;
+  background-repeat: repeat;
+}
 
+.card{
+  border-radius: 12px;
+border: 1px solid #292929;
+background: rgba(43, 43, 41, 0.70);
+backdrop-filter: blur(2px);
 }
 
 
@@ -45,4 +58,17 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   font-family: 'Qanelas Soft', 'inter', sans-serif;
+}
+
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  /* WebKit */
+  display: none;
 }
