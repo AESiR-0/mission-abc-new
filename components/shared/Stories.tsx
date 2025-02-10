@@ -48,20 +48,31 @@ These stories prove one thing—no dream is too big with the right guidance.`
 const Stories = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [selectedStory, setSelectedStory] = useState<Story>(stories[0]);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setScrollPosition((prev) => {
-        const newPosition = prev + 1;
-        return newPosition >= stories.length ? 0 : newPosition;
-      });
-    }, 3000);
+    const progressInterval = setInterval(() => {
+      setProgress((prev) => (prev + 1) % 100);
+    }, 50); // Update progress every 50ms for smooth animation
 
-    return () => clearInterval(interval);
+    const storyInterval = setInterval(() => {
+      setSelectedStory((prev) => {
+        const currentIndex = stories.findIndex(story => story.name === prev.name);
+        const nextIndex = (currentIndex + 1) % stories.length;
+        setProgress(0); // Reset progress when story changes
+        return stories[nextIndex];
+      });
+    }, 5000); // Change story every 5 seconds
+
+    return () => {
+      clearInterval(progressInterval);
+      clearInterval(storyInterval);
+    };
   }, []);
 
   const handleTagClick = (story: Story) => {
     setSelectedStory(story);
+    setProgress(0); // Reset progress when manually selecting a story
   };
 
   return (
@@ -98,22 +109,28 @@ const Stories = () => {
           {/* Right column */}
           <div className="flex flex-col w-full lg:w-1/2 gap-6">
             {/* Story selector buttons */}
-            <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 justify-start">
+            <div className="flex flex-wrap gap-20 justify-center">
               {stories.map((story: Story) => (
                 <button
                   key={story.name}
                   onClick={() => handleTagClick(story)}
                   className="group flex flex-col gap-1 py-2 transition-colors"
                 >
-                  <span className='px-3 sm:px-4 text-sm sm:text-base whitespace-nowrap hover:text-yellow transition-colors'>
+                  <span className={`${selectedStory.name == story.name ? 'text-white' : 'text-white/50'} font-[600] px-3 sm:px-4 text-2xl whitespace-nowrap hover:text-yellow transition-colors `}>
                     {story.name}
                   </span>
-                  <span
-                    className={`w-full h-1 transition-all duration-300 ${selectedStory == story
-                      ? 'bg-yellow w-full'
-                      : 'bg-white/50 w-1/2 group-hover:w-full'
-                      }`}
-                  />
+                  <div
+
+
+                    className="w-full relative h-1 transition-all duration-300 bg-white/50 group-hover:w-full"
+                  >
+                    <div 
+                      className="h-1 absolute bg-yellow transition-all duration-100 ease-linear"
+                      style={{ 
+                        width: selectedStory.name === story.name ? `${progress}%` : '0%'
+                      }} 
+                    />
+                  </div>
                 </button>
               ))}
             </div>

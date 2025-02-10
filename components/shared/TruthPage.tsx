@@ -1,4 +1,7 @@
+'use client'
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
 
 const truthCards = [
   {
@@ -34,31 +37,48 @@ const lies = [
   }
 ];
 
-const TruthPage = () => {
+export default function TruthPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="mt-[60px] px-4 md:px-0">
+    <div className="flex font-[500] flex-col min-h-screen">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: 0.2, // 1 second stagger
+        }}
+        className="mt-[60px] px-4 md:px-0">
+
         <h1 className="text-center text-[32px] md:text-[48px] font-bold font-[Qanelas Soft]">
           The lies of the CAT Mafia
         </h1>
         <p className="text-center text-[20px] md:text-[30px] font-[Qanelas Soft]">
           The coaching industry profits off your fear. They'll tell you
         </p>
-      </div>    
+      </motion.div>
 
       <section className="flex justify-center items-center min-h-[300px] md:h-[569px] mt-[40px] md:mt-[80px] mb-[50px] md:mb-[100px] relative px-4 md:px-0">
         <div className="relative w-full md:w-[928px] h-[300px] md:h-[569px]">
-          <Image 
-            src="/assests/images/girl.png" 
-            alt="Reference image" 
+
+          <Image
+            src="/assests/images/girl.png"
+            alt="Reference image"
             fill
             className="object-cover rounded-[12px]"
           />
           {/* Desktop Lies */}
           <div className="hidden md:block">
             {lies.map((lie, index) => (
-              <div
+              <motion.div
                 key={`desktop-${lie.id}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.2, // 1 second stagger
+                }}
                 className="absolute bg-[rgba(40,40,40,0.55)] border border-[rgba(62,62,62,1)] backdrop-blur-[52.4px] p-[16px_24px] rounded-[8px] text-white font-[Qanelas Soft]"
                 style={getPositionStyle(index)}
               >
@@ -68,7 +88,7 @@ const TruthPage = () => {
                 <div className="text-[16px] max-w-[220px]">
                   {lie.text}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -77,9 +97,16 @@ const TruthPage = () => {
       {/* Mobile Lies */}
       <div className="md:hidden px-4 mb-8">
         <div className="grid gap-4">
-          {lies.map((lie) => (
-            <div
+          {lies.map((lie, index) => (
+            <motion.div
               key={`mobile-${lie.id}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 1, // 1 second stagger
+              }}
               className="bg-[rgba(40,40,40,0.55)] border border-[rgba(62,62,62,1)] backdrop-blur-[52.4px] p-[16px_24px] rounded-[8px] text-white font-[Qanelas Soft]"
             >
               <div className="text-[#FFB85C] text-[14px] mb-1">
@@ -88,7 +115,7 @@ const TruthPage = () => {
               <div className="text-[16px]">
                 {lie.text}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -98,14 +125,14 @@ const TruthPage = () => {
           HERE'S THE TRUTH
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mt-8">
+        <div className="flex  flex-col md:flex-row justify-center gap-4 md:gap-8 mt-8">
           {truthCards.map((card, index) => (
             <div
               key={index}
               className="w-full md:w-[370.67px] rounded-[8px] p-[24px_16px] bg-[rgba(241,188,64,0.13)] flex flex-col gap-4 items-start"
             >
-              <div className="relative w-6 h-6">
-                <Image 
+              <div className="relative w-9 h-9">
+                <Image
                   src={card.icon}
                   alt="Icon"
                   fill
@@ -120,18 +147,17 @@ const TruthPage = () => {
         </div>
       </div>
     </div>
-  );      
+  );
 };
 
 const getPositionStyle = (index: number) => {
   const positions = [
-    { top: '70%', right: '-10%' },  
-    { top: '12%', right: '-10%' },  
-    { top: '10%', left: '-10%' },   
-    { top: '70%', left: '-10%' }    
+    { top: '70%', right: '-10%' },
+    { top: '12%', right: '-10%' },
+    { top: '10%', left: '-10%' },
+    { top: '70%', left: '-10%' }
   ];
-  
+
   return positions[index];
 };
 
-export default TruthPage;
