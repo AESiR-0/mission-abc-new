@@ -30,17 +30,17 @@ export default function HeroWithWebinars() {
     offset: ["start start", "end start"]
   });
 
-  // Calculate the scroll range based on the number of cards
+  // Adjust calculation to stop at last card
   const x = useTransform(
     scrollYProgress,
-    [0, 0.5], // Adjust these values to control when the scroll starts and ends
-    ["0%", `-${(webinars.length - 1) * 100}%`]
+    [0, 0.5], 
+    ["0%", `-${(webinars.length - 2) * 100}%`] // Subtract 2 instead of 1 to show last card fully
   );
 
   return (
     <div 
       ref={containerRef} 
-      className="h-[300vh] relative" // Increased height to allow for scrolling space
+      className="h-[300vh] relative"
     >
       <div className="sticky top-0 min-h-screen bg-[rgb(20,21,19)] text-white overflow-hidden">
         <div className="container mx-auto px-4 py-8 lg:py-16 flex flex-col lg:flex-row gap-8">
@@ -48,7 +48,13 @@ export default function HeroWithWebinars() {
           <div className="w-full lg:w-[692px] p-4 lg:pl-[120px] lg:pt-16 bg-[#141513] flex-col justify-start items-start gap-8 lg:gap-14 relative pb-[160px]">
             <div className="self-stretch flex-col justify-start items-start gap-8 lg:gap-14 flex">
               <div className="self-stretch flex-col justify-start items-start gap-4 lg:gap-6 flex">
-                <div className="text-white text-3xl lg:text-[54px] font-semibold font-['Qanelas Soft'] leading-tight lg:leading-[70.40px]">
+                <div className="text-white text-3xl lg:text-[54px] font-semibold font-['Qanelas Soft'] leading-tight lg:leading-[70.40px]"
+                style={{
+                  background: 'linear-gradient(97.33deg, #FFFFFF 3.33%, #989898 96.01%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}>
                   Your First Step to<br />IIM A, B, or C
                 </div>
 
