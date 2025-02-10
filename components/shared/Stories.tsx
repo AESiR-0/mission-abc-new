@@ -109,7 +109,7 @@ const Stories = () => {
                     {story.name}
                   </span>
                   <span
-                    className={`w-full h-0.5 transition-all duration-300 ${selectedStory == story
+                    className={`w-full h-1 transition-all duration-300 ${selectedStory == story
                       ? 'bg-yellow w-full'
                       : 'bg-white/50 w-1/2 group-hover:w-full'
                       }`}
