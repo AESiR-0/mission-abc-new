@@ -50,7 +50,14 @@ export default function TruthPage() {
         }}
         className="mt-[60px] px-4 md:px-0">
 
-        <h1 className="text-center text-[32px] md:text-[48px] font-bold font-[Qanelas Soft]">
+        <h1
+          style={{
+            background: 'linear-gradient(97.33deg, #FFFFFF 3.33%, #989898 96.01%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+          className="text-center text-[32px] md:text-[48px] font-bold font-[Qanelas Soft]">
           The lies of the CAT Mafia
         </h1>
         <p className="text-center text-[20px] md:text-[30px] font-[Qanelas Soft]">

@@ -19,9 +19,9 @@ export default function Home() {
       <MafiaCard />
       <HeroWithWebinars />
       <Stories />
-      <CatPrep />
       <TruthPage />
       <SharingStories />
+      <CatPrep />
 
       <TeachingExperience />
       <SuccessfullCarousel />

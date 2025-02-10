@@ -14,36 +14,39 @@ import Linkedin from '@/public/static/logo/socials/linkedin.png'
 
 export default function Footer() {
     return (
-        <div className="mx-4 md:m-16 md:mt-0 text-white">
+        <div className="mx-4 md:m-16 md:mt-0 ">
             {/* Hero Section */}
-            <div className="bg-grad-yellow overflow-hidden relative rounded-[24px] min-h-[500px] md:h-[500px] rounded-b-none py-8 md:py-12 px-4 md:px-20 flex flex-col md:flex-row justify-between items-center">
-                <div className="z-10 max-w-full md:max-w-[50%]">
-                    <h1 className="text-2xl flex flex-col gap-3 md:text-5xl font-semibold bg-clip-text text-transparent ">
+
+            <div className="bg-grad-yellow  max-md:flex max-md:flex-col max-md:justify-center max-md:items-center border-b-none overflow-hidden relative rounded-[24px] min-h-[500px] md:h-[500px]  py-8 md:py-12 px-4 md:px-20 flex flex-col md:flex-row justify-between items-start">
+                <div className="z-10 space-y-16  max-w-full md:max-w-[50%]">
+                    <h1 className="text-2xl max-md:text-3xl flex flex-col gap-3 md:text-6xl font-semibold blue-grad ">
                         <span>Start Your Journey </span> <span> with Mission ABC</span>
                     </h1>
                     <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-4 sm:space-x-4">
-                        <button className="font-manrope  btn bg-black hover:bg-[#F1BC40] hover:text-black text-[#F1BC40] px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md transition-all duration-300">
+                        <button className="font-manrope btn2 bg-black  hover:bg-[#F1BC40] hover:text-black text-[#F1BC40] px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md transition-all duration-300">
                             Start Now
                         </button>
-                        <button className="font-manrope  btn bg-white text-black px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md hover:bg-gray-200">
+                        <button className="font-manrope btn2 bg-white text-black px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md hover:bg-gray-200">
                             Download Book
                         </button>
                     </div>
+
                 </div>
                 <div className="mt-8 md:mt-0">
                     <Image
                         src={vectors} // Replace with actual image URL
-                        alt="Book Cover"
+                        alt="vectors"
                         width={1000}
                         height={430}
-                        className="absolute z-0 -bottom-10 -right-24 rotate-[-14deg] opacity-85"
+                        className="absolute z-0 -bottom-10 -right-24 rotate-[-14deg] max-md:opacity-100 max-md:scale-105 opacity-85"
                     />
                     <Image
                         src={coverBook} // Replace with actual image URL
+
                         alt="Book Cover"
                         width={600}
                         height={600}
-                        className="absolute bottom-0 right-0 z-10"
+                        className="absolute max-md:hidden bottom-0 right-0 z-10"
 
 
                     />

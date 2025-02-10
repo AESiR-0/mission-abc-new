@@ -7,8 +7,8 @@ import sanDeep2 from "@/public/static/hero/sandeep cut out.png";
 export default function Hero() {
   return (
     <>
-      <Navbar />
       <section className="hero-grad relative flex flex-col justify-center items-center gap-16 sm:gap-24 md:gap-32 mx-4 sm:m-10 rounded-xl min-h-screen px-4 sm:px-6 md:px-8 sm:py-16 md:py-32 py-24">
+        <Navbar />
         {/* Hero Content */}
         <div className="w-full max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center">
@@ -64,7 +64,7 @@ export default function Hero() {
             </div>
 
             {/* Sandeep Image */}
-            <Image 
+            <Image
               className="absolute z-10 max-md:hidden flip bottom-0 right-0 w-[280px] sm:w-[380px] md:w-[512px] h-auto object-contain"
               src={sanDeep2}
               alt="Sandeep Gupta"

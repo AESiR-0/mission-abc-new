@@ -41,10 +41,11 @@ const SharingStories = () => {
     }, []);
 
     return (
-        <div className="relative w-full min-h-screen px-4 sm:px-6 lg:px-8 mx-auto mt-20 lg:mt-[120px]">
+        <div className="relative w-full max-md:min-h-[500px] max-md:my-10 min-h-[600px] sm:min-h-screen px-4 sm:px-6 lg:px-8 mx-auto mt-12 sm:mt-20 lg:mt-52">
             {/* Background with gradient overlay */}
             <div
                 className="absolute inset-0"
+
                 style={{
                     backgroundImage: 'linear-gradient(180deg, rgba(20, 21, 19, 0.7) 0%, rgba(20, 21, 19, 0.7) 100%)',
                     backgroundColor: 'rgb(20, 21, 19)'
@@ -52,14 +53,15 @@ const SharingStories = () => {
             />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col items-center">
+            <div className="relative z-10 flex flex-col justify-center items-center">
                 <h2
-                    className="text-3xl md:text-5xl lg:text-[64px] text-center mb-4 px-4"
+                    className="text-4xl sm:text-3xl md:text-5xl lg:text-[64px] text-center mb-3 sm:mb-4 px-4"
                     style={{
                         fontFamily: 'Qanelas Soft',
                         fontWeight: 600,
                         lineHeight: '1.1',
                         letterSpacing: '-1px',
+
                         background: 'linear-gradient(97.33deg, #FFFFFF 3.33%, #989898 96.01%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -69,7 +71,7 @@ const SharingStories = () => {
                     Sharing our stories
                 </h2>
                 <p
-                    className="text-xl md:text-2xl lg:text-[32px] text-center mb-8 lg:mb-16 px-4"
+                    className="text-lg sm:text-xl md:text-2xl lg:text-[32px] text-center mb-6 sm:mb-8 lg:mb-16 px-4"
                     style={{
                         fontFamily: 'Qanelas Soft',
                         fontWeight: 400,
@@ -92,20 +94,16 @@ const SharingStories = () => {
                         {[...stories, ...stories].map((story, index) => (
                             <div
                                 key={`${story.id}-${index}`}
-                                className={`relative flex-shrink-0 ${index % stories.length === Math.floor(stories.length / 2) ? 'px-10' : 'px-2'}`}
-                                style={{
-                                    width: 'calc(100vw / 1.2)',
-                                    maxWidth: 'calc(100% / 3)',
-                                    minWidth: '280px',
-                                }}
+                                className="relative flex-shrink-0 px-2 w-[90vw] sm:w-[calc(100vw/1.2)] max-w-[calc(100%/3)] min-w-[280px]"
                             >
                                 <div className="relative w-full pt-[125%] rounded-2xl overflow-hidden">
                                     <Image
                                         src={story.image}
                                         alt={`Success story ${index + 1}`}
                                         fill
-                                        className="object-cover"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        className={`object-cover transition-transform duration-300 hover:scale-105 ${index % 2 === 0 ? 'scale-[0.85] rounded-2xl' : ''
+                                            }`}
+                                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 opacity-30" />
                                 </div>
@@ -113,10 +111,12 @@ const SharingStories = () => {
                         ))}
                     </div>
 
-                    {/* Gradient overlays for cut-off effect */}
+                    {/* Add gradient overlays for better visual effect on sides */}
+                    <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-[#141513] to-transparent" />
+                    <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-[#141513] to-transparent" />
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

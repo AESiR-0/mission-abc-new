@@ -76,13 +76,13 @@ const Stories = () => {
   };
 
   return (
-    <section className='min-h-screen w-full py-8 md:py-16'>
+    <section className='min-h-screen  w-full py-20  md:py-16'>
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Left column */}
           <div className="flex flex-col w-full lg:w-1/2 gap-4 md:gap-6">
             <h1
-              className="font-afacad font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-1px] max-w-3xl"
+              className="font-afacad font-semibold text-4xl max-md:text-center sm:text-4xl md:text-5xl lg:text-6xl tracking-[-1px] max-w-3xl"
               style={{
                 background: 'linear-gradient(97.33deg, #FFFFFF 3.33%, #989898 96.01%)',
                 WebkitBackgroundClip: 'text',
@@ -92,7 +92,7 @@ const Stories = () => {
             >
               Some success stories to tell
             </h1>
-            <p className='text-base sm:text-lg md:text-xl opacity-90 max-w-2xl'>
+            <p className='text-base max-md:text-center sm:text-lg md:text-xl opacity-90 max-w-2xl'>
               We are proud of our students and proudly wish to tell their stories
             </p>
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] lg:aspect-[4/3] mt-4">
