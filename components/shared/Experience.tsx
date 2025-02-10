@@ -12,10 +12,12 @@ const images = [
 export default function TeachingSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
-
+    const [video, setVideo] = useState<HTMLVideoElement | null>(null);
     const nextSlide = () => {
         if (isAnimating) return;
         setIsAnimating(true);
+        video?.pause();
+
         setCurrentIndex((prev) => (prev + 1) % images.length);
         setTimeout(() => setIsAnimating(false), 500); // Match this with animation duration
     };
@@ -23,8 +25,10 @@ export default function TeachingSection() {
     const prevSlide = () => {
         if (isAnimating) return;
         setIsAnimating(true);
+        video?.pause();
         setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
         setTimeout(() => setIsAnimating(false), 500); // Match this with animation duration
+
     };
 
     return (
@@ -35,7 +39,7 @@ export default function TeachingSection() {
                     <p className="text-yellow text-xl sm:text-2xl uppercase font-medium">
                         Get to know the other side of edu
                     </p>
-                    <h2 
+                    <h2
                         className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
                         style={{
                             background: 'linear-gradient(97.33deg, #FFFFFF 3.33%, #989898 96.01%)',
@@ -65,14 +69,14 @@ export default function TeachingSection() {
                     <div className="bg-[#1D1E1C] relative rounded-lg p-4 h-[500px]  ">
                         {/* Navigation Elements */}
                         <div className="absolute top-3 left-3 z-10">
-                            <Image 
-                                src="/static/logo/emblem_white.png" 
-                                alt="Logo" 
-                                width={30} 
-                                height={30} 
+                            <Image
+                                src="/static/logo/emblem_white.png"
+                                alt="Logo"
+                                width={30}
+                                height={30}
                             />
                         </div>
-                        
+
                         <div className="absolute top-3 right-3 z-10 flex gap-2">
                             <button
                                 onClick={prevSlide}
@@ -92,7 +96,7 @@ export default function TeachingSection() {
 
                         {/* Video Slider */}
                         <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-full">
-                            <div 
+                            <div
                                 className="relative w-full transition-transform duration-500 ease-in-out"
                                 style={{
                                     transform: `translateX(-${currentIndex * 100}%)`,
@@ -101,20 +105,21 @@ export default function TeachingSection() {
 
                                 <div className="flex">
                                     {images.map((src, index) => (
-                                        <div 
+                                        <div
                                             key={index}
-                                            className={`min-w-full px-4 transition-opacity duration-200 ${
-                                                currentIndex === index ? 'opacity-100' : 'opacity-0'
-                                            }`}
+                                            className={`min-w-full px-4 transition-opacity duration-200 ${currentIndex === index ? 'opacity-100' : 'opacity-0'
+                                                }`}
                                         >
                                             <video
                                                 className="w-full rounded-lg cursor-pointer"
                                                 height={800}
                                                 width={400}
                                                 onClick={(e) => {
-                                                    const video = e.currentTarget;
-                                                    video.paused ? video.play() : video.pause();
+                                                    setVideo(e.currentTarget);
+                                                    video?.paused ? video?.play() : video?.pause();
                                                 }}
+
+
                                                 src={src}
                                             />
                                         </div>
