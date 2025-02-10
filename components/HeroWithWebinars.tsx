@@ -122,7 +122,7 @@ export default function HeroWithWebinars() {
                     </div>
                   </div>
 
-                  <button className="relative w-full lg:w-[148px] px-4 py-3 lg:py-3.5 rounded-xl group">
+                  <button className="font-manrope  btn relative w-full lg:w-[148px] px-4 py-3 lg:py-3.5 rounded-xl group">
                     {/* Gradient border background */}
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#1c1c1c] via-[#f1bc3f]/30 to-[#f1bc3f]/50" />
                     

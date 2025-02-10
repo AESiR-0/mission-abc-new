@@ -10,9 +10,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'manrope': ['var(--font-manrope)', 'sans-serif'],
         'qanelas': ['var(--font-qanelas)', 'sans-serif'],
         'afacad': ['Afacad', 'sans-serif'],
         'playfair': ['Playfair Display', 'serif'],
+
       },
       fontSize: {
         'hero': '110px',
@@ -23,7 +25,7 @@ export default {
       letterSpacing: {
         'hero': '27px',
       },
-    
+
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -44,7 +46,7 @@ export default {
           foreground: 'hsl(var(--popover-foreground))',
         },
 
-        
+
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',

@@ -22,10 +22,10 @@ export default function Footer() {
                         <span>Start Your Journey </span> <span> with Mission ABC</span>
                     </h1>
                     <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-4 sm:space-x-4">
-                        <button className="bg-black hover:bg-[#F1BC40] hover:text-black text-[#F1BC40] px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md transition-all duration-300">
+                        <button className="font-manrope  btn bg-black hover:bg-[#F1BC40] hover:text-black text-[#F1BC40] px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md transition-all duration-300">
                             Start Now
                         </button>
-                        <button className="bg-white text-black px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md hover:bg-gray-200">
+                        <button className="font-manrope  btn bg-white text-black px-4 md:px-6 py-2 md:py-3 rounded-[12px] shadow-md hover:bg-gray-200">
                             Download Book
                         </button>
                     </div>

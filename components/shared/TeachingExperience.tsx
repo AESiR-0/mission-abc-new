@@ -39,11 +39,11 @@ const TeachingExperience = () => {
           </div>
           {/* Navigation Buttons */}
           <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4">
-            <button className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
+            <button className="font-manrope  btn bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
               <span className="sr-only">Previous</span>
               ←
             </button>
-            <button className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
+            <button className="font-manrope  btn bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
               <span className="sr-only">Next</span>
               →
             </button>

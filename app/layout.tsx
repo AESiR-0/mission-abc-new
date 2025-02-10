@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local'
+import { Manrope } from 'next/font/google'
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+})
 
 const qanelasSoft = localFont({
   src: [
@@ -37,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${qanelasSoft.variable} font-qanelas bg-[#141513] antialiased`}
+        className={`${qanelasSoft.variable} ${manrope.variable} font-qanelas bg-[#141513] antialiased`}
       >
         {children}
       </body>
