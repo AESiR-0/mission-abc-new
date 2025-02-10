@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #171415;
-  --foreground: #171717;
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 31, 41, 55;
 }
 
 .bg-grad-yellow {
@@ -42,7 +42,7 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
   font-family: 'Qanelas Soft', 'inter', sans-serif;
 }

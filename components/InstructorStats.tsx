@@ -14,31 +14,10 @@ const StatItem: React.FC<StatItemProps> = ({ number, label }) => (
   </div>
 );
 
-export const InstructorStats = () => {
-  const stats = [
-    {
-      number: "29 Years +",
-      label: "of transforming lives"
-    },
-    {
-      number: "76,000 Hrs +",
-      label: "Delivered onstage"
-    },
-    {
-      number: "100,000 Admits +",
-      label: "to top schools & counting"
-    }
-  ];
-
+export default function InstructorStats() {
   return (
-    <section className="flex gap-10 p-5 mt-10 rounded-xl bg-black bg-opacity-20 max-md:flex-col max-md:gap-5 max-sm:p-4">
-      {stats.map((stat, index) => (
-        <StatItem
-          key={index}
-          number={stat.number}
-          label={stat.label}
-        />
-      ))}
+    <section className="bg-black text-white p-8">
+   
     </section>
-  );
-};
+  )
+}

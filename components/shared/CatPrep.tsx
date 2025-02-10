@@ -21,7 +21,7 @@ const features = [
 
 export default function CatPrep() {
   return (
-    <section className="min-h-screen bg-[rgb(20,21,19)] text-white">
+    <section className="min-h-screen bg-[rgb(20,21,19)] text-white font-afacad">
       <div className="min-h-screen flex flex-col justify-between py-16 md:py-24">
         <div className="container mx-auto px-4 xl:px-0 max-w-[1440px] w-full">
           {/* Header Box - 1168x181 */}
@@ -29,16 +29,14 @@ export default function CatPrep() {
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-16">
               {/* Left Section - 701x181 */}
               <div className="w-full lg:w-[701px] space-y-6">
-                <p 
-                  className="font-['Qanelas_Soft'] font-medium text-[24px] leading-[29px] tracking-[0%] text-[#F1BC40]"
-                  style={{ fontFamily: 'Qanelas Soft' }}
+                <p
+                  className="font-afacad font-medium text-[24px] leading-[29px] tracking-[0%] text-[#F1BC40]"
                 >
                   WHAT YOU GET
                 </p>
-                <h1 
-                  className="font-['Qanelas_Soft'] font-semibold text-[64px] leading-[70.4px] tracking-[-1px]"
-                  style={{ 
-                    fontFamily: 'Qanelas Soft',
+                <h1
+                  className="font-afacad font-semibold text-[64px] leading-[70.4px] tracking-[-1px]"
+                  style={{
                     background: 'linear-gradient(97.33deg, #FFFFFF 3.33%, #989898 96.01%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -52,17 +50,17 @@ export default function CatPrep() {
 
               {/* Right Section - 467x148 */}
               <div className="w-full lg:w-[467px] flex flex-col gap-8">
-                <p 
+                <p
                   className="text-[20px] sm:text-[24px] lg:text-[32px] leading-[38.08px] tracking-[-0.02em] text-[#F2F2F2]"
-                  style={{ 
-                    fontFamily: 'Qanelas Soft',
+                  style={{
                     fontWeight: 400
                   }}
                 >
+
                   IIM A, B, and C aren't for everyone.
                   <br className="hidden sm:block" />Neither is Mission ABC.
                 </p>
-                <Button 
+                <Button
                   className="relative w-full md:w-auto text-black font-semibold py-6 px-8 rounded-xl text-lg transition-all duration-300"
                   style={{
                     width: 'fit-content',
@@ -88,7 +86,7 @@ export default function CatPrep() {
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24 lg:mt-32 lg:px-[140px]">
             {features.map((feature, index) => (
-              <div 
+              <div
                 key={index}
                 className="relative rounded-2xl overflow-hidden group h-[480px]"
                 style={{
@@ -100,10 +98,9 @@ export default function CatPrep() {
                 {/* Content */}
                 <div className="flex flex-col h-full">
                   <div className="p-12 space-y-8">
-                    <h3 
-                      className="font-['Qanelas_Soft'] text-[36px] leading-[46px] tracking-[-2.12px]"
-                      style={{ 
-                        fontFamily: 'Qanelas Soft',
+                    <h3
+                      className="font-afacad text-[36px] leading-[46px] tracking-[-2.12px]"
+                      style={{
                         fontWeight: 600,
                         background: 'linear-gradient(78.05deg, #FFFFFF 68.84%, rgba(178, 178, 178, 0.7) 124.48%)',
                         WebkitBackgroundClip: 'text',
@@ -113,7 +110,7 @@ export default function CatPrep() {
                     >
                       {feature.title}
                     </h3>
-                    <p 
+                    <p
                       className="text-xl"
                       style={{
                         color: 'rgba(213, 213, 213, 1)'
@@ -122,14 +119,14 @@ export default function CatPrep() {
                       {feature.description}
                     </p>
                   </div>
-                  
+
                   {/* Image container */}
                   <div className="mt-auto">
                     <div className="flex justify-center">
-                      <Image 
-                        src={feature.icon} 
+                      <Image
+                        src={feature.icon}
                         alt={feature.title}
-                        width={300} 
+                        width={300}
                         height={240}
                         className="w-auto h-[240px]"
                       />

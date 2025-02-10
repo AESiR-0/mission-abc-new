@@ -81,9 +81,13 @@ export default function SuccessCarousel() {
             centeredSlides
             loop={true}
             breakpoints={{
+              390:{
+                slidesPerView:1.5,
+                spaceBetween: 10,
+              },
               640: {
                 slidesPerView: 2,
-                spaceBetween: 30,
+                spaceBetween: 10,
               },
               1024: {
                 slidesPerView: 3,

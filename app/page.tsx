@@ -8,22 +8,29 @@ import Stories from "@/components/shared/Stories";
 import SuccessfullCarousel from "@/components/shared/SuccesfullCarousel";
 
 import TruthPage from "@/components/shared/TruthPage";
-import TeachingExperience from '@/components/shared/TeachingExperience'
-
+import Hero from '@/components/Hero'
+import InstructorStats from '@/components/InstructorStats'
+import TeachingExperience from "@/components/shared/Experience";
 
 export default function Home() {
   return (
-    <div className=" w-full bg-[rgb(20,21,19)] text-white  min-h-screen">
-      {/* <Start />  */}
+    <main className="flex min-h-screen  flex-col">
+      <Hero />
+      <InstructorStats />
+      <div className=" w-full bg-[rgb(20,21,19)] text-white  min-h-screen">
+        {/* <Start />  */}
 
-      <MafiaCard />
-      <TruthPage />
 
-      <Stories />
-      <CatPrep />
-      <SuccessfullCarousel />
-      {/* <TeachingExperience /> */}
-      <Footer />
-    </div>
+        <MafiaCard />
+        <TruthPage />
+
+        <Stories />
+        <CatPrep />
+        <TeachingExperience />
+        <SuccessfullCarousel />
+        {/* <TeachingExperience /> */}
+        <Footer />
+      </div>
+    </main>
   );
 }
