@@ -1,9 +1,6 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const webinars = [
   {
@@ -27,55 +24,22 @@ const webinars = [
 ];
 
 export default function HeroWithWebinars() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end end"]
+  });
 
-  useEffect(() => {
-    const slider = sliderRef.current;
-    const section = sectionRef.current;
-    
-    if (!slider || !section) return;
-
-    const totalScroll = slider.scrollWidth - slider.offsetWidth;
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        pin: true,
-        start: "top top",
-        end: "+=300%",
-        scrub: 1,
-        invalidateOnRefresh: true,
-        onUpdate: (self) => {
-          const progress = self.progress;
-          gsap.to(slider, {
-            x: -totalScroll * progress,
-            duration: 0.5,
-            ease: "none"
-          });
-        },
-      }
-    });
-
-    // Refresh ScrollTrigger when window resizes
-    const handleResize = () => {
-      ScrollTrigger.refresh(true);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      tl.kill();
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    };
-  }, []);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-66%"]);
 
   return (
-    <section ref={sectionRef} className="min-h-screen bg-[rgb(20,21,19)] text-white overflow-hidden">
+    <section 
+      ref={targetRef}
+      className="min-h-screen bg-[rgb(20,21,19)] text-white overflow-hidden"
+    >
       <div className="container mx-auto px-4 py-8 lg:py-16 flex flex-col lg:flex-row gap-8">
         {/* Left Section */}
-        <div className="w-full lg:w-[692px] p-4 lg:pl-[120px] lg:pt-16 bg-[#141513] flex-col justify-start items-start gap-8 lg:gap-14 relative">
+        <div className="w-full lg:w-[692px] p-4 lg:pl-[120px] lg:pt-16 bg-[#141513] flex-col justify-start items-start gap-8 lg:gap-14 relative pb-[160px]">
           <div className="self-stretch flex-col justify-start items-start gap-8 lg:gap-14 flex">
             <div className="self-stretch flex-col justify-start items-start gap-4 lg:gap-6 flex">
               <div className="text-white text-3xl lg:text-[64px] font-semibold font-['Qanelas Soft'] leading-tight lg:leading-[70.40px]">
@@ -88,7 +52,7 @@ export default function HeroWithWebinars() {
             
             <div className="flex-col justify-start items-start gap-4 lg:gap-6 flex">
               {[
-                "Free Webinar: Experience Sandeep's game-changing approac",
+                "Free Webinar: Experience Sandeep's game-changing approach",
                 "VARC & DILR from scratch—even if you're starting fresh.",
                 "Elite Quant—because good isn't enough, you need to be the best.",
                 "Real Exam Strategy—what actually works on D-Day."
@@ -123,10 +87,9 @@ export default function HeroWithWebinars() {
             </div>
           </div>
           
-          {/* Modified yellow section - positioned absolutely */}
-          <div className="absolute left-0 bottom-[-120px] w-full lg:w-[545px] p-4 lg:p-6 bg-[#f1bc41] rounded-tr-xl rounded-br-xl border border-[#292929]">
+          {/* Modified yellow section - adjusted positioning */}
+          <div className="absolute left-0 bottom-0 w-full lg:w-[545px] p-4 lg:p-6 bg-[#f1bc41] rounded-tr-xl rounded-br-xl border border-[#292929]">
             <div className="text-[#1d1e1c] text-xl lg:text-2xl font-medium font-['Qanelas Soft']">
-
               New Batch Starts This April, See the difference. Register now.
             </div>
           </div>
@@ -134,12 +97,9 @@ export default function HeroWithWebinars() {
 
         {/* Right Section - Horizontal Scrolling Cards */}
         <div className="w-full lg:flex-1 overflow-hidden">
-          <div 
-            ref={sliderRef}
+          <motion.div 
+            style={{ x }}
             className="flex gap-4 lg:gap-6"
-            style={{
-              width: 'max-content',
-            }}
           >
             {webinars.map((webinar) => (
               <div 
@@ -183,16 +143,14 @@ export default function HeroWithWebinars() {
 
                 <div className="relative w-[90%]">
                   <svg className="w-full" viewBox="0 0 483 269" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-
                     <path d="M0.5 12C0.5 5.37258 5.87258 0 12.5 0H470.5C477.127 0 482.5 5.37258 482.5 12V269H0.5V12Z" fill="#2B2B2B"/>
                   </svg>
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
-} 
+}
