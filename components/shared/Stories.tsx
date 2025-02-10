@@ -17,8 +17,8 @@ const stories: Story[] = [
     content: [
       "Three years. Three attempts at the CAT exam. A disheartening 19th percentile. Akshay Goel had hit rock bottom—scammed by misleading coaching, losing lakhs, and almost giving up hope.",
       "But Akshay wasn't just anyone. AIR 1 in IIT-JEE Math (1999), a brilliant mind reduced to doubting his own potential. They told him to accept failure, give up, go home. They were dead wrong.",
-      "Everything changed in a single, transformative session. Akshay walked in carrying the weight of his failures and walked out with a spark in his eyes, saying, 'I feel like I can cross 90 today.'",
-      "Just three months later, he didn't just cross 90—he shattered the 99+ percentile barrier and secured his place at IIM Calcutta."
+      `Everything changed in a single, transformative session. Akshay walked in carrying the weight of his failures and walked out with a spark in his eyes, saying, 'I feel like I can cross 90 today.'",
+      Just three months later, he didn't just cross 90—he shattered the 99+ percentile barrier and secured his place at IIM Calcutta.`
     ],
     background: "bg-gray-900"
   },
@@ -26,10 +26,9 @@ const stories: Story[] = [
     name: "Arun Verma",
     title: "STORY OF ARUN VERMA",
     content: [
-      "Three years. Three attempts at the CAT exam. A disheartening 19th percentile. Akshay Goel had hit rock bottom—scammed by misleading coaching, losing lakhs, and almost giving up hope.",
-      "But Akshay wasn't just anyone. AIR 1 in IIT-JEE Math (1999), a brilliant mind reduced to doubting his own potential. They told him to accept failure, give up, go home. They were dead wrong.",
-      `Everything changed in a single, transformative session. Akshay walked in carrying the weight of his failures and walked out with a spark in his eyes, saying, 'I feel like I can cross 90 today.
-      Just three months later, he didn't just cross 90—he shattered the 99+ percentile barrier and secured his place at IIM Calcutta.`
+      "Arun Verma didn't have the luxury of an IIT background or a knack for math. He started his CAT journey at a modest 58th percentile, burdened by self-doubt...",
+      "Four months of relentless effort and the right mentorship later, Arun transformed into a top performer with a 99.74 percentile, earning admission into IIM Ahmedabad.",
+      `His story is a testament that you don't need years of preparation or a fancy degree. With the right mentor, a winning strategy, and unwavering commitment, the impossible becomes achievable.`
     ],
     background: "bg-gray-900"
   },
@@ -37,8 +36,10 @@ const stories: Story[] = [
     name: "Siddharth",
     title: "STORY OF SIDDHARTH",
     content: [
-      "Three years. Three attempts at the CAT exam. A disheartening 19th percentile. Akshay Goel had hit rock bottom—scammed by misleading coaching, losing lakhs, and almost giving up hope.",
-      "But Akshay wasn't just anyone. AIR 1 in IIT-JEE Math (1999), a brilliant mind reduced to doubting his own potential. They told him to accept failure, give up, go home. They were dead wrong.",
+      "Siddharth, an engineer, struggled against the tides of self-doubt and anxiety, his dreams anchored in IIM Bangalore",
+      "Under Sandeep's mentorship, he mastered verbal, quant, and DI, leveraging the OCTAVE strategy and KTW sessions to reshape his mindset.",
+      `The outcome? Offers from IIMA, IIMC, and IIMB—choosing Bangalore for its vibrant startup culture.
+These stories prove one thing—no dream is too big with the right guidance.`
     ]
   }
   // Add more stories as needed
@@ -107,12 +108,11 @@ const Stories = () => {
                   <span className='px-3 sm:px-4 text-sm sm:text-base whitespace-nowrap hover:text-yellow transition-colors'>
                     {story.name}
                   </span>
-                  <span 
-                    className={`w-full h-0.5 transition-all duration-300 ${
-                      selectedStory == story 
-                        ? 'bg-yellow w-full' 
-                        : 'bg-white/50 w-1/2 group-hover:w-full'
-                    }`}
+                  <span
+                    className={`w-full h-0.5 transition-all duration-300 ${selectedStory == story
+                      ? 'bg-yellow w-full'
+                      : 'bg-white/50 w-1/2 group-hover:w-full'
+                      }`}
                   />
                 </button>
               ))}
@@ -123,15 +123,14 @@ const Stories = () => {
               <h2 className="text-lg sm:text-xl md:text-2xl text-yellow font-bold mb-4">
                 {selectedStory.title}
               </h2>
-              <div className="flex flex-col gap-3 md:gap-4">
+              <div className="flex flex-col gap-3 md:gap-5">
                 {selectedStory.content.map((paragraph, index) => (
                   <p
                     key={index}
-                    className={`text-sm sm:text-base md:text-lg ${
-                      index == 0 
-                        ? 'font-bold text-white' 
-                        : 'text-gray-300'
-                    }`}
+                    className={`text-md sm:text-base md:text-xl ${index == 0
+                      ? 'font-bold text-white'
+                      : 'text-gray-300'
+                      }`}
                   >
                     {paragraph}
                   </p>
