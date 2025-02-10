@@ -39,11 +39,11 @@ export default function MafiaCard() {
   };
 
   return (
-    <div className="flex text-white min-h-screen w-full bg-[rgb(20,21,19)] justify-center items-center  sm:p-6  lg:pt-32">
+    <div className="flex text-white min-h-screen w-full bg-[rgb(20,21,19)] justify-center items-center    lg:pt-32">
       {/* Main Container */}
-      <div className="flex flex-col lg:flex-row w-full mx-5  gap-0 relative">
+      <div className="flex flex-col lg:flex-row w-full items-center justify-center  gap-0 relative">
         {/* Left Section */}
-        <div className="w-1/2 h-[500px] sm:h-[550px] md:h-[600px] lg:h-[778px] lg:-mt-[80px] relative">
+        <div className="w-1/2 h-[500px] sm:h-[550px] md:h-[600px] lg:h-[778px]  relative">
           {/* Vector 2520 - Hidden on mobile */}
           {/* <div className="hidden lg:block absolute w-[41px] h-[66px] left-[525px] top-0 bg-[rgba(241,188,64,1)] z-10" /> */}
           <div className="hidden lg:block absolute right-10 top-0 z-10">
@@ -92,7 +92,7 @@ export default function MafiaCard() {
         </div>
 
         {/* Right Section - Carousel */}
-        <div className="w-1/2 lg:w-[656.5px] h-[600px] sm:h-[550px] md:h-[600px] lg:h-[778px] lg:-mt-[80px] relative">
+        <div className="w-1/2 lg:w-[656.5px] h-[600px] sm:h-[550px] md:h-[600px] lg:h-[778px] relative">
           <div className="w-full h-full lg:h-[618px] rounded-b-[12px] lg:rounded-r-[12px] lg:rounded-bl-none relative bg-[rgba(29,30,28,0.6)] border-[rgba(251,206,101,1)] lg:border-r-2 lg:border-t-2 lg:border-b-2 overflow-hidden">
             {/* Bottom gradient overlay */}
             <div className="absolute inset-x-0 bottom-0 h-[200px] sm:h-[250px] lg:h-[300px]" 
