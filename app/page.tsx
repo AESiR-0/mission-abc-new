@@ -3,7 +3,6 @@
 import CatPrep from "@/components/shared/CatPrep";
 import Footer from "@/components/shared/Footer";
 import MafiaCard from "@/components/shared/MafiaCard";
-import Start from "@/components/shared/Start";
 import Stories from "@/components/shared/Stories";
 import SuccessfullCarousel from "@/components/shared/SuccesfullCarousel";
 
@@ -18,7 +17,6 @@ export default function Home() {
       <Hero />
       <InstructorStats />
       <div className=" w-full bg-[rgb(20,21,19)] text-white  min-h-screen">
-        {/* <Start />  */}
 
 
         <MafiaCard />
