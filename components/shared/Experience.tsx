@@ -28,10 +28,10 @@ export default function TeachingSection() {
     };
 
     return (
-        <section className="w-full font-qanelas text-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12">
+        <section className="w-full font-qanelas relative bg-[rgb(20,21,19)] overflow-hidden text-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 {/* Left Text Content */}
-                <div className="w-full md:w-1/2 space-y-3">
+                <div className="w-full md:w-1/2 z-20 bg-[rgb(20,21,19)] space-y-3">
                     <p className="text-yellow text-xl sm:text-2xl uppercase font-medium">
                         Get to know the other side of edu
                     </p>
@@ -61,8 +61,8 @@ export default function TeachingSection() {
                 </div>
 
                 {/* Right Slider Section */}
-                <div className="w-full md:w-1/2 relative">
-                    <div className="bg-[#1D1E1C] rounded-lg p-4 h-[500px] relative overflow-hidden">
+                <div className="w-full md:w-1/2 ">
+                    <div className="bg-[#1D1E1C] relative rounded-lg p-4 h-[500px]  ">
                         {/* Navigation Elements */}
                         <div className="absolute top-3 left-3 z-10">
                             <Image 
@@ -91,18 +91,19 @@ export default function TeachingSection() {
                         </div>
 
                         {/* Video Slider */}
-                        <div className="absolute top-1/2 -translate-y-1/2 w-full">
+                        <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-full">
                             <div 
                                 className="relative w-full transition-transform duration-500 ease-in-out"
                                 style={{
                                     transform: `translateX(-${currentIndex * 100}%)`,
                                 }}
                             >
+
                                 <div className="flex">
                                     {images.map((src, index) => (
                                         <div 
                                             key={index}
-                                            className={`min-w-full px-4 transition-opacity duration-500 ${
+                                            className={`min-w-full px-4 transition-opacity duration-200 ${
                                                 currentIndex === index ? 'opacity-100' : 'opacity-0'
                                             }`}
                                         >

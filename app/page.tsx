@@ -26,9 +26,9 @@ export default function Home() {
         <CatPrep />
         <TeachingExperience />
         <SuccessfullCarousel />
-        {/* <TeachingExperience /> */}
         <Footer />
       </div>
+
     </main>
   );
 }
