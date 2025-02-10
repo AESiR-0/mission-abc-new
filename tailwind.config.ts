@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'qanelas': ['Qanelas Soft', 'sans-serif'],
+        'qanelas': ['var(--font-qanelas)', 'sans-serif'],
         'afacad': ['Afacad', 'sans-serif'],
         'playfair': ['Playfair Display', 'serif'],
       },

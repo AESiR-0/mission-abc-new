@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@600&family=Playfair+Display:ital,wght@1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +11,11 @@
 
 .bg-grad-yellow {
   background: linear-gradient(99.53deg, #FFDD8F 3.24%, #E2B95A 79.42%);
+}
+
+.flip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .hero-grad {
@@ -32,11 +37,11 @@
   background-repeat: repeat;
 }
 
-.card{
+.card {
   border-radius: 12px;
-border: 1px solid #292929;
-background: rgba(43, 43, 41, 0.70);
-backdrop-filter: blur(2px);
+  border: 1px solid #292929;
+  background: rgba(43, 43, 41, 0.70);
+  backdrop-filter: blur(2px);
 }
 
 
@@ -46,6 +51,14 @@ backdrop-filter: blur(2px);
   font-weight: 600;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'Qanelas Soft';
@@ -75,10 +88,14 @@ body {
 
 @layer utilities {
   .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
+
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+    display: none;
+    /* Chrome, Safari and Opera */
   }
 }
